@@ -4,87 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information Resource Center Proposal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="images/sitebanner.jpg" alt="Website Banner">
+    <header class="header_container">
+        <img src="images/sitebanner.jpg" alt="Website Banner" class="header_picture">
         <navigation>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                    <ul>
+            <div id="wrap">
+                <input class="menu-btn" type="checkbox" id="menu-btn" >
+                <label class="menu-icon" for="menu-btn"><span class="navicon" aria-label="Toggle for menu"></span></label>
+            <ul class="navbar">
+                <li><a href="index.html" class="site-name">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul class="sub-nav">
                         <li><a href="about.html#mission">Mission</a></li>
                         <li><a href="about.html#vision">Vision</a></li>
                         <li><a href="about.html#research">Research</a></li>
                         <li><a href="about.html#about_the_founder">About the Founder</a></li>
                     </ul>
-                <li><a href="services.html">Services</a></li>
-                    <ul>
-                        <li><a href="#life_basics">Life Basics</a></li>
-                        <li><a href="#financial_activities_services">Financial Activities Services</a></li>
-                        <li><a href="#professional_business_services">Professional Business Services</a></li>
-                        <li><a href="#educational_&_health_services">Educational and Health Services</a></li>
-                        <li><a href="#leisure_&_hospitality">Leisure and Hospitality Services</a></li>
-                        <li><a href="#outreach">Outreach</a></li>
+                </li>
+                <li><a href="services.html">Services</a>
+                    <ul class="sub-nav">
+                        <li><a href="services.html#life_basics">Life Basics</a></li>
+                        <li><a href="services.html#financial_activities_services">Financial Activities Services</a></li>
+                        <li><a href="services.html#professional_business_services">Professional Business Services</a></li>
+                        <li><a href="services.html#educational_&_health_services">Educational and Health Services</a></li>
+                        <li><a href="services.html#leisure_&_hospitality">Leisure and Hospitality Services</a></li>
+                        <li><a href="services.html#outreach">Outreach</a></li>
                     </ul>
-                <li><a href="studyproposal.html">Study Proposals</a></li>
-                    <ul>
+                </li>
+                <li><a href="studyproposal.html">Study Proposals</a>
+                    <ul class="sub-nav">
                         <li><a href="studyproposal.html#proposal_1">Proposals</a></li>
                         <li><a href="studyproposal.html#get_involved">Get Involved</a></li>
                     </ul>
+                </li>
             </ul>
+            </div>
         </navigation>
     </header>
     <main>
         <div>
-            <h1 id="life_basics">Life Basics</h1>
-            <p>Head of institution: mainly programs/classes, with an office to ask general questions (workers will determine if the recipient is best to go to different department depending on depth of question and the expertise/resources needed)</p>
-            <h2>Programs:</h2>
-            <p>Everyday skills (“Things I wish someone taught me…”): basic car repair (changing a tire, jumping a car, etc.), how to build credit, basic technology questions, managing bills, parenting 101, time management, etc.</p>
+            <h1 id="life_basics" class="about-h1">Life Basics</h1>
+            <p class="center-p">Head of institution: mainly programs/classes, with an office to ask general questions (workers will determine if the recipient is best to go to different department depending on depth of question and the expertise/resources needed)</p>
+            <h2 class="service-h2">Programs:</h2>
+            <p class="inner-p">Everyday skills (“Things I wish someone taught me…”): basic car repair (changing a tire, jumping a car, etc.), how to build credit, basic technology questions, managing bills, parenting 101, time management, etc.</p>
         </div>
         <div>
-            <h1 id="financial_activities_services">Finanicial Activities Services</h1>
-            <p>Finance and Insurance advice and tools</p>
-            <h2>Programs:</h2>
-            <p>How Insurance Works (ex. Life insurance was intended to be used while you're alive, not for when you’re dead although it can work both ways), Business Finances 101, Personal Finances 101, Credit Building and Repair, etc.</p>
+            <h1 id="financial_activities_services" class="about-h1">Finanicial Activities Services</h1>
+            <p class="center-p">Finance and Insurance advice and tools</p>
+            <h2 class="service-h2">Programs:</h2>
+            <p class="inner-p">How Insurance Works (ex. Life insurance was intended to be used while you're alive, not for when you’re dead although it can work both ways), Business Finances 101, Personal Finances 101, Credit Building and Repair, etc.</p>
         </div>
         <div>
-            <h1 id="professional_business_services">Professional Business Services</h1>
-            <p>This department will help people with anything related to professionalism and business.</p>
-            <h2>Programs:</h2>
-            <p>Interviewing Tips, Resume Building, MS Office Skills, Google Suite Skills, How to Build a Business, etc.</p>
+            <h1 id="professional_business_services" class="about-h1">Professional Business Services</h1>
+            <p class="center-p">This department will help people with anything related to professionalism and business.</p>
+            <h2 class="service-h2">Programs:</h2>
+            <p class="inner-p">Interviewing Tips, Resume Building, MS Office Skills, Google Suite Skills, How to Build a Business, etc.</p>
         </div>
         <div>
-            <h1 id="educational_&_health_services">Educational and Health Services</h1>
-            <p>This department will work with individuals in anything education and health. This department will also hold a sub-office that will be the Crisis Avoidance and Remedies Services</p>
-            <h2>Programs:</h2>
-            <p>School Hacks, College Choices, Filling out FAFSA, CPR classes, First Aid Classes, What To Do When…: Emergency Response, Mental Health and Wellness etc.</p>
+            <h1 id="educational_&_health_services" class="about-h1">Educational and Health Services</h1>
+            <p class="center-p">This department will work with individuals in anything education and health. This department will also hold a sub-office that will be the Crisis Avoidance and Remedies Services</p>
+            <h2 class="service-h2">Programs:</h2>
+            <p class="inner-p">School Hacks, College Choices, Filling out FAFSA, CPR classes, First Aid Classes, What To Do When…: Emergency Response, Mental Health and Wellness etc.</p>
         </div>
         <div>
-            <h1 id="leisure_&_hospitality">Leisure and Hospitality Services</h1>
-            <p>This department will provide leisure activities and space for community events and community sports.</p>
-            <h2>Programs:</h2>
-            <p>Sports Contests, Art Shows, Acting Classes, Dance Classes, Watch Parties, etc.</p>
+            <h1 id="leisure_&_hospitality" class="about-h1">Leisure and Hospitality Services</h1>
+            <p class="center-p">This department will provide leisure activities and space for community events and community sports.</p>
+            <h2 class="service-h2">Programs:</h2>
+            <p class="inner-p">Sports Contests, Art Shows, Acting Classes, Dance Classes, Watch Parties, etc.</p>
         </div>
         <div>
-            <h1 id="outreach">Outreach</h1>
-            <p>This department will conduct school visits, community center visits, neighborhood visits, library visits, etc. It'll also be responsible for recruiting new partners (non-profits/businesses) to assist with increase in our list of resources as well as possible speakers/presenters for programs/classes.</p>
+            <h1 id="outreach" class="about-h1">Outreach</h1>
+            <p class="center-p">This department will conduct school visits, community center visits, neighborhood visits, library visits, etc. It'll also be responsible for recruiting new partners (non-profits/businesses) to assist with increase in our list of resources as well as possible speakers/presenters for programs/classes.</p>
         </div>
     </main>
-    <footer>
-        <div>
+    <footer class="footer-wrap">
+        <div class="footer-column">
             <h2>Support the Project</h2>
             <ul>
-                <li><a href="https://inf6420.github.io/ss23-morgmaia/studyproposal.html">Donate</a></li>
-                <li><a href="https://inf6420.github.io/ss23-morgmaia/studyproposal.html">Volunteer for a Study</a></li>
+                <li><a href="http://127.0.0.1:5500/studyproposal.html#get_involved">Donate</a></li>
+                <li><a href="http://127.0.0.1:5500/studyproposal.html#get_involved">Volunteer for a Study</a></li>
                 <li><a href="mailto:leonaynichole98@gmail.com">Connect with Us</a></li>
             </ul>
         </div>
-        <div>
+        <div class="footer-column">
             <h2>Contact Information</h2>
             <p>Email: leonaynichole98@gmail.com</p>
         </div>
-        <div>
+        <div class="footer-column">
             <p>© Copyright, May 2023</p>
         </div>
     </footer>
