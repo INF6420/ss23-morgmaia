@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information Resource Center Proposal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="images/sitebanner.jpg" alt="Website Banner">
+    <header class="header_container">
+        <img src="images/sitebanner.jpg" alt="Website Banner" class="header_picture">
         <navigation>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                    <ul>
+            <div id="wrap">
+                <input class="menu-btn" type="checkbox" id="menu-btn" >
+                <label class="menu-icon" for="menu-btn"><span class="navicon" aria-label="Toggle for menu"></span></label>  
+            <ul class="navbar">
+                <li><a href="index.html" class="site-name">Home</a></li>
+                <li><a href="about.html">About</a>
+                    <ul class="sub-nav">
                         <li><a href="about.html#mission">Mission</a></li>
                         <li><a href="about.html#vision">Vision</a></li>
                         <li><a href="about.html#research">Research</a></li>
                         <li><a href="about.html#about_the_founder">About the Founder</a></li>
                     </ul>
-                <li><a href="services.html">Services</a></li>
-                    <ul>
+                </li>
+                <li><a href="services.html">Services</a>
+                    <ul class="sub-nav">
                         <li><a href="services.html#life_basics">Life Basics</a></li>
                         <li><a href="services.html#financial_activities_services">Financial Activities Services</a></li>
                         <li><a href="services.html#professional_business_services">Professional Business Services</a></li>
@@ -27,32 +32,39 @@
                         <li><a href="services.html#leisure_&_hospitality">Leisure and Hospitality Services</a></li>
                         <li><a href="services.html#outreach">Outreach</a></li>
                     </ul>
-                <li><a href="studyproposal.html">Study Proposals</a></li>
-                    <ul>
+                </li>
+                <li><a href="studyproposal.html">Study Proposals</a>
+                    <ul class="sub-nav">
                         <li><a href="studyproposal.html#proposal_1">Proposals</a></li>
                         <li><a href="studyproposal.html#get_involved">Get Involved</a></li>
                     </ul>
+                </li>
             </ul>
+            </div>
         </navigation>
     </header>
+    <br>
     <main>
-        <div class="slideshow">
-            <div class="numbertext">1/2</div>
-                <img src="images/slide1.jpg" alt="Service Departments Slide">
-            <div class="text">Target Service Departments</div>
-            <div class="numbertext">2/2</div>
-                <img src="images/slide2.jpg" alt="Get Involved Slide">
-            <div class="text">Get Involved</div>
-            <a class="prev" onclick="plusSlides(-1)"></a>
-            <a class="next" onclick="plusSlides(1)"></a>
+        <div class="slider">
+            <span id="slide-1"></span>
+            <span id="slide-2"></span>
+            <div class="image-container">
+              <img src="images/slide1.jpg" class="slide" width="500" height="500" />
+              <img src="images/slide2.jpg" class="slide" width="500" height="500" />
+            </div>
+            <div class="buttons">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+            </div>
         </div>
+        <br>
         <div>
-            <h1>A Information Resource Center Proposal</h1>
-            <p>This site explores a business idea born out of the love and dedication to having a sense of community that continuously helps lift each other to do and be the best they can be. While navigating this site, you will learn what exactly is being proposed and the ways in which we can start to get it up and running in the appropriate time. This site is dedicated to the wonderful people who may share this sentiment and would like to support in any way they are able to. Support could be shown through suggestions, donations, connections and so on.</p>
+            <h1 class="home-header">An Information Resource Center Proposal</h1>
+            <p class="center-p">This site explores a business idea born out of the love and dedication to having a sense of community that continuously helps lift each other to do and be the best they can be. While navigating this site, you will learn what exactly is being proposed and the ways in which we can start to get it up and running in the appropriate time. This site is dedicated to the wonderful people who may share this sentiment and would like to support in any way they are able to. Support could be shown through suggestions, donations, connections and so on.</p>
         </div>
     </main>
-    <footer>
-        <div>
+    <footer class="footer-wrap">
+        <div class="footer-column">
             <h2>Support the Project</h2>
             <ul>
                 <li><a href="http://127.0.0.1:5500/studyproposal.html#get_involved">Donate</a></li>
@@ -60,11 +72,11 @@
                 <li><a href="mailto:leonaynichole98@gmail.com">Connect with Us</a></li>
             </ul>
         </div>
-        <div>
+        <div class="footer-column">
             <h2>Contact Information</h2>
             <p>Email: leonaynichole98@gmail.com</p>
         </div>
-        <div>
+        <div class="footer-column">
             <p>© Copyright, May 2023</p>
         </div>
     </footer>
