@@ -69,29 +69,38 @@
         <h1 class="home-header">Proposal 4</h1>
         <p class="center-p">Have people create vision boards and then I (and other members) could break down different elements to ask them if they know how to achieve those goals and what are those steps and resources.</p>
     </div>
+    <hr/>
     <div>
         <h1 id="get_involved" class="home-header">Get Involved</h1>
         <div class="contact-box">
-        <form action="https://inf6420.github.io/ss23-morgmaia/studyproposal.html">
+        <form action="https://formspree.io/f/xpzgzlal" method="post" class="validate" novalidate="true">
             <p class="form-p">If you would like to get involved, please fill out this form.</p>
             <br/>
-            <p class="label">
-                Full Name<input type="text" name="Full Name" size="15" maxlength="50"/>
-            </p>
-            <p class="label">
-                Email<input type="email" name="Email" size="15" maxlength="40"/>
-            </p>
-            <p class="label">
-                Phone<input type="number" name="Phone" size="10" maxlength="10"/>
-            </p>
-            <br/>
-            <p class="label">Contribution:</p>
+        <div>
+            <label for="name">Full Name</label>
+            <input type="text" name="name" class="form-input" size="15" maxlength="50" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-input" size="15" maxlength="40" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone</label>
+            <input type="phone" name="Phone" size="10" maxlength="10" class="form-input">
+        </div>
+            
+        <div>
+            <label for="contribution">Contribution:</label>
             <input type="checkbox" name="service" value="donate" checked="checked"/>Donate
             <input type="checkbox" name="service" value="volunteer_for_study"/>Volunteer for Study
-            <br/>
-            <div class="center">
-            <input type="submit" name="submit" value="Submit"/>
-            </div>
+        </div>
+    
+        <br>
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>            
         </form>
         </div>
     </div>
@@ -113,5 +122,6 @@
             <p>© Copyright, May 2023</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

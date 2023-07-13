@@ -31,7 +31,7 @@ body {
     height: 50px;
     padding: 0;
     margin: 0;
-    position: absolute;
+    position: absolute;   
 }
 
 .navbar li {
@@ -131,10 +131,6 @@ a:hover {
     display: none;
 }
 
-.menu-btn:checked ~ .navbar {
-    max-height: 240px;
-}
-
 .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
 }
@@ -146,6 +142,7 @@ a:hover {
 .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
 }
+
 
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
@@ -169,12 +166,6 @@ a:hover {
         padding: 10px 0;
     }
 
-    .navbar {
-        clear: both;
-        float: right;
-        max-height: none;
-    }
-
     .navbar.active {
         left: 0;
     }
@@ -185,6 +176,21 @@ a:hover {
 
     .menu-icon {
         display: none;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .navbar {
+        display: none;
+        clear: both;
+        float: right;
+        max-height: none;
+    }
+
+    .menu-btn:checked ~ .navbar {
+        max-height: 240px;
+        opacity: 1;
+        transition: all 0.2s ease-out;
     }
 }
 
@@ -315,20 +321,29 @@ a:hover {
 }
 
 blockquote {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 50px;
     color: blue;
+    font-style: italic;
+    font-size: 16px;
 }
 
+
+form {
+    width: 60%;
+    margin: auto;
+  }
+
 .contact-box {
-    padding: 12px 24px 24px 24px;
-    margin: 48px 12px;
+    width: 70%;
+    padding: 12px 12px 12px 12px;
+    margin: 3em auto;
     background: grey;
     border-radius: 4px;
 }
 
-.label {
+label {
     margin-left: 12px;
     font-size: 20px;
     font-weight: bold;
@@ -338,8 +353,8 @@ input[type=text],
 input[type=email],
 input[type=phone] {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 1.5em;
+    border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
@@ -347,29 +362,55 @@ input[type=phone] {
     resize: vertical;
 }
 
-input[type=submit] {
+.form-input:focus {
+    outline: none;
+    border: 2px solid #1565C0;
+}
+
+button[type=submit] {
     background: #64B5F6;
-    margin: 0 auto;
+    margin: 20px 45%;
     outline: 0;
     color: white;
     border: 0;
-    padding: 12px 24px;
+    padding: 15px 30px;
     border-radius: 4px;
     transition: all ease-in-out 0.1s;
     position: relative;
     display: inline-block;
     text-align: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
-input[type=submit]:focus {
-    background: #A5D6A7;
+button[type=submit]:focus {
     color: whitesmoke;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
     background: blue;
 }
 
-.center {
+.form-p {
     text-align: center;
+    font-size: 22px;
+}
+
+#get_involved {
+    color: blue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+
+.error-message {
+    margin-top: -1em;
+    margin-bottom: 1em;
+    padding-top: 5px;
+    color: #C62828;
+    font-weight: bold;
+  }
+
+input.form-input.error {
+    border-color: red;
 }
