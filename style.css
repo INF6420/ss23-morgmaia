@@ -5,13 +5,14 @@ body {
 }
 
 .header_container {
+    background-color: darkblue;
     width: 100%;
     height: auto;
 }
 
 .header_picture {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 250px;
     margin: auto;
     justify-content: center;
     display: flex;
@@ -26,6 +27,84 @@ body {
     background-color: black;
 }
 
+/*new responsive nav technique*/
+input [type=checkbox] {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+@media screen and (max-width: 48em) {
+    .navbar {
+        display: none;
+        clear: both;
+        float: none;
+        max-height: fit-content;
+        position:absolute;
+        background-color: black;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .navbar li:hover {
+        display: inline-block;
+        background-color:grey;
+        transition: 0.3s ease;
+    }
+
+    .navbar li+ li {
+        margin-top: 1px;
+    }
+
+    input[type=checkbox]:checked ~ .navbar {
+        display: block;
+    }
+
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background-color: darkcyan;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+    }
+
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+
+    .subnav {
+        left: 50px;
+        top:30px;
+        transform: translateX(35%);
+    }
+
+    .subnav li:hover {
+        background-color:darkcyan;
+    }
+}
+
+/*end*/
 
 .navbar {
     height: 50px;
@@ -178,22 +257,6 @@ a:hover {
         display: none;
     }
 }
-
-@media screen and (max-width: 48em) {
-    .navbar {
-        display: none;
-        clear: both;
-        float: right;
-        max-height: none;
-    }
-
-    .menu-btn:checked ~ .navbar {
-        max-height: 240px;
-        opacity: 1;
-        transition: all 0.2s ease-out;
-    }
-}
-
 
 .slider {
     max-width: 500px;
@@ -349,9 +412,7 @@ label {
     font-weight: bold;
 }
 
-input[type=text],
-input[type=email],
-input[type=phone] {
+input.form-input {
     width: 100%;
     padding: 1.5em;
     border: 1px solid black;
@@ -362,7 +423,7 @@ input[type=phone] {
     resize: vertical;
 }
 
-.form-input:focus {
+input.form-input:focus {
     outline: none;
     border: 2px solid #1565C0;
 }
@@ -371,7 +432,7 @@ button[type=submit] {
     background: #64B5F6;
     margin: 20px 45%;
     outline: 0;
-    color: white;
+    color: black;
     border: 0;
     padding: 15px 30px;
     border-radius: 4px;
@@ -389,6 +450,7 @@ button[type=submit]:focus {
 
 button[type=submit]:hover {
     background: blue;
+    color: white;
 }
 
 .form-p {
